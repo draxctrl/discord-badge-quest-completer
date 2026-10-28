@@ -84,4 +84,8 @@ Released under the [MIT License](LICENSE), which keeps the original copyright no
 
 ## Disclaimer
 
-Faking game activity may go against Discord's Terms of Service. Use it at your own risk. This project is not affiliated with Discord.
+This tool is intended for educational purposes and personal use. Faking game activity may go against Discord's Terms of Service. Please respect Discord's terms of service, partners, game publishers and advertisers' rights when using this application.
+
+The creators and maintainers of this project are not liable for any damages, account suspensions, or other consequences that may arise from using this software. Use at your own risk.
+
+Discord is a registered trademark of Discord Inc. It is referenced on this open-source project for descriptive and definition purposes only and does not imply any affiliation, sponsorship, or endorsement by Discord Inc in any way.
