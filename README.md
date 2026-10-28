@@ -45,7 +45,18 @@ Discord works out what you are playing by looking for running programs. This app
 
 The stand-ins only do this: stay open. You can delete the `games/` folder at any time.
 
-The app talks to a few places: Discord's public list of detectable games (and a GitHub mirror of it), Discord's image server for game icons, and the Gameza banner in the header. Clicking the banner opens gameza.lk.
+The app talks to a few places: Discord's public list of detectable games (and a GitHub mirror of it), Discord's image server for game icons, and the Gameza banner (see below).
+
+## The Gameza banner
+
+The banner at the top of the app is an ad for [Gameza](https://gameza.lk). It loads from gameza.lk when the app opens and every 15 minutes. As with any website, that means Gameza's servers, and its host and Cloudflare, can see an ordinary web request that includes your IP address.
+
+- The banner page has no trackers and no third-party scripts.
+- Your IP address is not used to identify you, and it is never sold or shared.
+- When you click the banner, gameza.lk opens with a tag (`utm_source=badge-quest-completer`). This is only so Gameza can count how many visits come from this app. The visit is counted with a one-way hash, not your name or account.
+- The app sends no Discord information to Gameza.
+
+If you build the app yourself and don't want the banner, delete the `<BannerFrame />` line in `src/components/AppHeader.vue`.
 
 ## Using it
 
