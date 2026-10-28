@@ -11,6 +11,12 @@ Both badges are shown with their ten levels, and there is a built-in guide in En
 > [!NOTE]
 > Discord does not update badge progress straight away. New games and hours can take up to 24 to 48 hours to show on your profile. The app cannot read your badge level from Discord. The optional "Starting point" boxes let you type in the numbers from your profile.
 
+## Download
+
+Get the latest zip from the [Releases page](https://github.com/draxctrl/discord-badge-quest-completer/releases/latest), unzip it somewhere you can write files, and run `discord-quest-completer.exe`. Keep the `data` folder next to it.
+
+The app is not code-signed, so Windows may say "unknown publisher". Choose More info, then Run anyway. The release page lists a SHA-256 checksum so you can check the download.
+
 ## Screenshots
 
 The numbers in these screenshots are sample data, so you can see how progress looks.

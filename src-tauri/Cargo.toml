@@ -1,6 +1,6 @@
 [package]
 name = "discord-quest-completer"
-version = "25.10.7"
+version = "1.0.0"
 description = "Discord Badge and Quest Completer"
 authors = ["you"]
 edition = "2021"
