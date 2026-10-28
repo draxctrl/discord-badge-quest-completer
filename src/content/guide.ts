@@ -81,7 +81,7 @@ export const GUIDE: Record<GuideLang, GuideText> = {
         ],
         creditTitle: 'Based on an open-source project',
         creditBody:
-            'This is a redesigned version of Discord Quest Completer by Mark Terence Tiglao, shared under the MIT license. The original page explains how the stand-in programs work.',
+            'This is an enhanced version of Discord Quest Completer by Mark Terence Tiglao, shared under the MIT license. The original page explains how the stand-in programs work.',
         creditButton: 'Read the original project on GitHub',
     },
     si: {
@@ -139,7 +139,7 @@ export const GUIDE: Record<GuideLang, GuideText> = {
         ],
         creditTitle: 'විවෘත මූලාශ්‍ර ව්‍යාපෘතියක් මත පදනම්ව',
         creditBody:
-            'මෙය Mark Terence Tiglao විසින් නිර්මිත Discord Quest Completer හි, MIT බලපත්‍රය යටතේ නැවත සැලසුම් කළ අනුවාදයකි. ආදේශක වැඩසටහන් ක්‍රියා කරන ආකාරය මුල් පිටුවෙන් කියවිය හැක.',
+            'මෙය Mark Terence Tiglao විසින් නිර්මිත Discord Quest Completer හි, MIT බලපත්‍රය යටතේ වැඩිදියුණු කළ අනුවාදයකි. ආදේශක වැඩසටහන් ක්‍රියා කරන ආකාරය මුල් පිටුවෙන් කියවිය හැක.',
         creditButton: 'GitHub හි මුල් ව්‍යාපෘතිය කියවන්න',
     },
 };

@@ -72,7 +72,7 @@ Project layout: `src/` is the Vue interface, `src-tauri/` is the Rust app, and `
 
 ## Credits and license
 
-This is a redesigned version of [Discord Quest Completer](https://github.com/markterence/discord-quest-completer) by Mark Terence Tiglao. If you find the original useful, consider supporting [the author](https://github.com/markterence).
+This is an enhanced version of [Discord Quest Completer](https://github.com/markterence/discord-quest-completer) by Mark Terence Tiglao. If you find the original useful, consider supporting [the author](https://github.com/markterence).
 
 Released under the [MIT License](LICENSE), which keeps the original copyright notice.
 
