@@ -1,0 +1,109 @@
+@import "tailwindcss";
+@import "@fontsource-variable/bricolage-grotesque";
+@import "@fontsource-variable/instrument-sans";
+@import "@fontsource-variable/noto-sans-sinhala";
+
+/*
+  Colors come from the Gameza banner that sits in the header: flame orange on
+  warm near-black, cream type. Everything else is a quiet step of that brown.
+*/
+@theme {
+  --font-display: "Bricolage Grotesque Variable", "Noto Sans Sinhala Variable", "Nirmala UI", "Segoe UI", sans-serif;
+  --font-sans: "Instrument Sans Variable", "Noto Sans Sinhala Variable", "Nirmala UI", "Segoe UI", system-ui, sans-serif;
+
+  --color-ink: #0f0c0a;
+  --color-panel: #181310;
+  --color-raised: #211a16;
+  --color-line: #33291f;
+  --color-line-soft: #261e18;
+  --color-cream: #f0e6dd;
+  --color-muted: #a39385;
+  --color-faint: #6e6055;
+  --color-flame: #ff6b18;
+  --color-flame-hi: #ff9a4d;
+  --color-flame-deep: #b8430a;
+  --color-ok: #7bd88f;
+  --color-bad: #ff7a6b;
+}
+
+@layer base {
+  html, body, #app {
+    height: 100%;
+  }
+  body {
+    margin: 0;
+    background: var(--color-ink);
+    color: var(--color-cream);
+    font-family: var(--font-sans);
+    font-size: 14px;
+    line-height: 1.45;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3 {
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
+  }
+  button { cursor: pointer; }
+  button:disabled { cursor: not-allowed; }
+  :focus-visible {
+    outline: 2px solid var(--color-flame-hi);
+    outline-offset: 2px;
+    border-radius: 6px;
+  }
+  ::selection { background: var(--color-flame-deep); color: var(--color-cream); }
+
+  /* Our own scrollbars: slim rounded thumb, no arrow buttons. */
+  ::-webkit-scrollbar { width: 12px; height: 12px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-line);
+    border-radius: 999px;
+    border: 3px solid transparent;
+    background-clip: content-box;
+  }
+  ::-webkit-scrollbar-thumb:hover { background: var(--color-faint); background-clip: content-box; border: 3px solid transparent; }
+  ::-webkit-scrollbar-thumb:active { background: var(--color-flame); background-clip: content-box; border: 3px solid transparent; }
+  ::-webkit-scrollbar-button { display: none; width: 0; height: 0; }
+  ::-webkit-scrollbar-corner { background: transparent; }
+
+  /* The search box draws its own clear button in the browser; we do not want it. */
+  input[type="search"]::-webkit-search-cancel-button,
+  input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; appearance: none; display: none; }
+}
+
+@layer components {
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+    border-radius: 10px; padding: 0.55rem 1rem; font-weight: 600;
+    border: 1px solid var(--color-line);
+    background: var(--color-raised); color: var(--color-cream);
+    transition: background-color 120ms, border-color 120ms, transform 120ms;
+  }
+  .btn:hover:not(:disabled) { border-color: var(--color-faint); background: #2a211b; }
+  .btn:active:not(:disabled) { transform: translateY(1px); }
+  .btn:disabled { opacity: 0.45; }
+  .btn-primary {
+    background: var(--color-flame); border-color: var(--color-flame); color: #1a0c04;
+  }
+  .btn-primary:hover:not(:disabled) { background: var(--color-flame-hi); border-color: var(--color-flame-hi); }
+  .btn-stop {
+    background: transparent; border-color: var(--color-bad); color: var(--color-bad);
+  }
+  .btn-stop:hover:not(:disabled) { background: rgba(255, 122, 107, 0.12); border-color: var(--color-bad); }
+  .btn-small { padding: 0.3rem 0.7rem; border-radius: 8px; font-size: 13px; }
+
+  .field {
+    width: 100%; border-radius: 10px; border: 1px solid var(--color-line);
+    background: var(--color-ink); color: var(--color-cream); padding: 0.55rem 0.75rem;
+  }
+  .field::placeholder { color: var(--color-faint); }
+  .field:focus { border-color: var(--color-flame); outline: none; }
+
+  .panel {
+    background: var(--color-panel); border: 1px solid var(--color-line-soft); border-radius: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}

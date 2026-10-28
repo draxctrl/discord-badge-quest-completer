@@ -1,0 +1,18 @@
+[package]
+name = "src-win"
+version = "0.2.0"
+edition = "2021"
+
+[build-dependencies]
+cc = "1.0"
+
+[[bin]]
+name = "src-win"
+path = "src/main.rs"
+
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true

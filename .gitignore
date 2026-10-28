@@ -1,0 +1,37 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Node / Vue
+node_modules
+dist
+dist-ssr
+*.local
+
+# Rust / Cargo Build Artifacts (This catches the 900+ files!)
+**/target/
+**/*.rs.bk
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+_target
+# Exclude binaries and executables these are built by the build process/Generated Custom Runners & Resources
+src-tauri/resources/*.exe
+src-tauri/resources/src-darwin
+src-tauri/resources/src-win.exe
+src-tauri/resources/src-linux
+src-tauri/resources/src-macos
